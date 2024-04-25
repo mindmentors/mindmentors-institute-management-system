@@ -1,0 +1,38 @@
+server:
+  port: 5052
+
+spring:
+  application:
+    name: MMC-STAFF-MANAGEMENT-SERVICE
+  config:
+    import: optional:configserver:http://localhost:8085
+  jpa:
+    hibernate:
+      ddl-auto: update
+      show-sql: false
+
+#  servlet:
+#    multipart:
+#      enabled: 'true '
+#      file-size-threshold: 1KB
+#      max-file-size: 300MB
+#  datasource:
+#    url: jdbc:mysql://${STAFF_DB_HOST:localhost}:${STAFF_DB_PORT:3306}/${STAFF_DB:staff_management_module}
+#    driver-class-name: com.mysql.cj.jdbc.Driver
+#    username: ${STAFF_DB_USER_NAME:root}
+#    password: ${STAFF_DB_USER_PASSWORD:root}
+#    activate:
+#      on-profile:
+#        - dev
+
+
+
+#logging:
+#  level:
+#    root: ERROR
+#    org.springframework.web: ERROR
+#    com.auth0.application: TRACE
+
+
+
+

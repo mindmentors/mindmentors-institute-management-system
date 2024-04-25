@@ -1,0 +1,13 @@
+spring:
+  application:
+    name: config-server
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/codecreativeminds/mmc-service-configuration
+          clone-on-start: true
+          
+server:
+  port: ${CONTAINER_PORT:8001}
+     

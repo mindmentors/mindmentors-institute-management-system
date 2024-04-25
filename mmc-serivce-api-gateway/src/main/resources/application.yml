@@ -1,0 +1,19 @@
+server:
+  port: 7075
+
+spring:
+  application:
+    name: MMC-SERVICE-API-GATEWAY
+  config:
+    import: optional:configserver:http://localhost:8085
+
+
+  cloud:
+    gateway:
+      routes:
+        - id: MMC-STAFF-MANAGEMENT-SERVICE
+          uri: lb://MMC-STAFF-MANAGEMENT-SERVICE
+          predicates:
+            - Path=/api/**
+
+
