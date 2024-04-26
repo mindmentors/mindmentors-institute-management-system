@@ -2,11 +2,15 @@ package com.mmc.app.platform.model;
 
 import java.io.Serializable;
 
+import lombok.Getter;
+import lombok.Setter;
 import org.springframework.web.multipart.MultipartFile;
 
 import lombok.Data;
 
 @Data
+@Getter
+@Setter
 public class StaffDetailRequest implements Serializable {
 	/**
 	 * Serial Version Id

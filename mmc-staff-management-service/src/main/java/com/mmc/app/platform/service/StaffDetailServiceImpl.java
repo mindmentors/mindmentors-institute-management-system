@@ -66,6 +66,7 @@ public class StaffDetailServiceImpl implements StaffDetailService {
 		try {
 			String doc = imageSaver.saveImageToStorage(document);
 			String degree = imageSaver.saveImageToStorage(degreeCertificate);
+
 			request.setUploadDocument(doc);
 			request.setDegreeCertificate(degree);
 			// Inorder to map dto to entity pass dto object and entity class to same method
@@ -74,7 +75,7 @@ public class StaffDetailServiceImpl implements StaffDetailService {
 			empDetails = objectMapper.mapEntityToDto(staffDetail, StaffDetailDto.class);
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
-			e.printStackTrace();
+			LOGGER.error("Exception :: {}",e.getMessage());
 		}
 		return empDetails;
 	}
