@@ -4,7 +4,7 @@ services:
   mmc-staff-service:
     build: ./mmc-staff-management-service
     ports:
-      - "8081:8080" # Map port 8081 on host to port 8080 in the container
+      - "8081:8081" # Map port 8081 on host to port 8080 in the container
     environment:
       - SPRING_PROFILES_ACTIVE=docker
      # - EUREKA_CLIENT_SERVICE_URL_DEFAULTZONE=http://service-registry:8761/eureka/
@@ -34,7 +34,7 @@ services:
   service-registry:
     build: ./mmc-service-registry
     ports:
-      - "8761:8761" # Map port 8761 on host to port 8761 in the container
+      - "8002:8002" # Map port 8761 on host to port 8761 in the container
     networks:
       - backend
 
