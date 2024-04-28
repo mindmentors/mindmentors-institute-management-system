@@ -16,7 +16,7 @@ spring:
       file-size-threshold: 1KB
       max-file-size: 300MB
   datasource:
-    url: jdbc:mysql://${STAFF_DB_HOST:52.66.214.93}:${STAFF_DB_PORT:3306}/${STAFF_DB:staff_management_module}
+    url: jdbc:mysql://${STAFF_DB_HOST:localhost}:${STAFF_DB_PORT:3306}/${STAFF_DB:staff_management_module}
     driver-class-name: com.mysql.cj.jdbc.Driver
     username: ${STAFF_DB_USER_NAME:root}
     password: ${STAFF_DB_USER_PASSWORD:root}
