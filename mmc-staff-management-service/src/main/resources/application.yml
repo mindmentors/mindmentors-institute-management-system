@@ -5,7 +5,7 @@ spring:
   application:
     name: STAFF-SERVICE
   config:
-    import: optional:configserver:http://3.111.168.203:8888
+    import: optional:configserver:http://13.233.134.7613.233.134.76:8888
   #  import: optional:configserver:http://localhost:8085
   jpa:
     hibernate:
