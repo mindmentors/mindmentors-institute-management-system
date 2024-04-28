@@ -19,7 +19,7 @@ services:
   mysql:
     image: mysql:latest
     ports:
-      - "3306:3306"
+      - "3307:3307"
     environment:
       MYSQL_ROOT_PASSWORD: root
       MYSQL_DATABASE: staff_management_module
