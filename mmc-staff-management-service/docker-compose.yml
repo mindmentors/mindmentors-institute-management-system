@@ -5,24 +5,26 @@ services:
     image: staff-service
     ports:
       - "8081:8081" # Map port 8081 on host to port 8080 in the container
-    environment:
-      - SPRING_PROFILES_ACTIVE=docker
-      - SPRING_DATASOURCE_URL=jdbc:mysql://mysql:3306/staff_management_module
-      - SPRING_DATASOURCE_USERNAME=root
-      - SPRING_DATASOURCE_PASSWORD=root
     depends_on:
-      - mysql
+      - mysqldb
     networks:
       - backend
+    volumes:
+      - /data/springboot-app
 
 
-  mysql:
+  mysqldb:
     image: mysql:latest
+    networks:
+      - backend
     ports:
       - "3306:3306"
     environment:
       MYSQL_ROOT_PASSWORD: root
       MYSQL_DATABASE: staff_management_module
+
+    volumes:
+      - /data/mysql
 
 networks:
   backend:
