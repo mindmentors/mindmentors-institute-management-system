@@ -6,28 +6,26 @@ spring:
     name: STAFF-SERVICE
 
   jpa:
+    database-platform: org.hibernate.dialect.MySQL8Dialect
     hibernate:
-      ddl-auto: create
-      show-sql: false
+      ddl-auto: update
+    show-sql: true
 
-  servlet:
-    multipart:
-      enabled: 'true '
-      file-size-threshold: 1KB
-      max-file-size: 300MB
+
   datasource:
     url: jdbc:mysql://localhost:3306/staff_management_module
     driver-class-name: com.mysql.cj.jdbc.Driver
     username: root
     password: root
 
-    spring:
-      jpa:
-        properties:
-          hibernate:
-            dialect: org.hibernate.dialect.MySQL8Dialect
 
 
+
+  servlet:
+    multipart:
+      enabled: 'true '
+      file-size-threshold: 1KB
+      max-file-size: 300MB
 
 #logging:
 #  level:
