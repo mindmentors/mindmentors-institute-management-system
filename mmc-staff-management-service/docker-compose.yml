@@ -7,23 +7,14 @@ services:
       - "8081:8081" # Map port 8081 on host to port 8080 in the container
     environment:
       - SPRING_PROFILES_ACTIVE=docker
-      - CONFIG_SERVER_URI=http://config-server:8888
       - SPRING_DATASOURCE_URL=jdbc:mysql://mysql:3306/staff_management_module
       - SPRING_DATASOURCE_USERNAME=root
       - SPRING_DATASOURCE_PASSWORD=root
     depends_on:
-      - config-server
       - mysql
     networks:
       - backend
 
-
-  config-server:
-    image: config-server
-    ports:
-      - "8888:8888" # Map port 8888 on host to port 8888 in the container
-    networks:
-      - backend
 
   mysql:
     image: mysql:latest
