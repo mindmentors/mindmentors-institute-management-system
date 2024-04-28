@@ -34,7 +34,7 @@ services:
   service-registry:
     build: ./mmc-service-registry
     ports:
-      - "8002:8002" # Map port 8761 on host to port 8761 in the container
+      - "8761:8761" # Map port 8761 on host to port 8761 in the container
     networks:
       - backend
 

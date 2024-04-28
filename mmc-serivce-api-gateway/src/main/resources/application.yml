@@ -1,11 +1,12 @@
 server:
-  port: 7075
+  port: 8080
 
 spring:
   application:
     name: MMC-SERVICE-API-GATEWAY
   config:
-    import: optional:configserver:http://localhost:8085
+    import: optional:configserver:http://13.201.121.103:8888
+   # import: optional:configserver:http://localhost:8085
 
 
   cloud:
