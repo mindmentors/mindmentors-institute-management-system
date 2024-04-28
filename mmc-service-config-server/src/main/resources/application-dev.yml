@@ -9,5 +9,5 @@ spring:
           clone-on-start: true
           
 server:
-  port: ${CONTAINER_PORT:8001}
+  port: ${CONTAINER_PORT:8888}
      
