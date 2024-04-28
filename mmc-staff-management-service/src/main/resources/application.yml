@@ -3,13 +3,13 @@ server:
 
 spring:
   application:
-    name: MMC-STAFF-MANAGEMENT-SERVICE
+    name: STAFF-SERVICE
   config:
     import: optional:configserver:http://3.111.168.203:8888
   #  import: optional:configserver:http://localhost:8085
   jpa:
     hibernate:
-      ddl-auto: update
+      ddl-auto: create
       show-sql: false
 
 #  servlet:

@@ -37,6 +37,11 @@ public class DesigResourceController {
 
 	private static final Logger LOGGER = LoggerFactory.getLogger(DesigResourceController.class);
 
+	@GetMapping("/desig/hello")
+	public String DesigTest(){
+		return "hello from desig";
+	}
+
 	/**
 	 * Get Designation Detail.
 	 *
